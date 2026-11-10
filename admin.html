@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090910"><title>OVEN | Premium Control Center</title>
+<style>
+:root{--bg:#090910;--panel:#14141e;--panel2:#1d1b29;--ink:#f8f5ef;--muted:#aaa5b5;--gold:#e8b84f;--purple:#853bdf;--line:#393445;--green:#21bf69;--red:#ef5367}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#49206c55,transparent 35%),var(--bg);color:var(--ink);font-family:Arial,Tahoma,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1440px,95%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px 0;border-bottom:1px solid var(--line)}.brand{font-weight:1000;font-size:26px;letter-spacing:4px;color:var(--gold)}.brand small{display:block;font-size:9px;letter-spacing:3px;color:#b9a6d3}.btn{border:1px solid var(--line);background:var(--panel2);color:var(--ink);padding:11px 15px;border-radius:10px}.gold{background:linear-gradient(110deg,#ffdc88,#d9a32f);color:#17100a;border:0;font-weight:900}.login{max-width:440px;margin:12vh auto;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 25px 80px #0008}.login h1{margin-top:0}.field{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:#0d0d15;color:var(--ink);outline:none}.field:focus{border-color:var(--gold)}.muted{color:var(--muted);line-height:1.7;font-size:13px}.app{display:none}.layout{display:grid;grid-template-columns:235px 1fr;gap:18px;margin:22px auto}.side,.main{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:16px}.side{height:max-content;position:sticky;top:15px}.side button{display:block;width:100%;text-align:right;margin:5px 0;padding:13px;border:1px solid transparent;border-radius:10px;background:transparent;color:var(--ink)}.side button.active,.side button:hover{background:#332344;border-color:#7043a0}.side .exit{color:#ff9aa6;margin-top:20px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.stat{background:var(--panel2);border:1px solid var(--line);border-radius:13px;padding:16px}.stat small{color:var(--muted)}.stat b{display:block;font-size:24px;color:var(--gold);margin-top:8px}.sectiontitle{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;margin:5px 0 18px}.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.form .wide{grid-column:1/-1}textarea.field{min-height:85px;resize:vertical}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}.prod{display:grid;grid-template-columns:100px 1fr;gap:12px;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px;min-width:0}.prod img{width:100px;height:115px;object-fit:cover;border-radius:8px;background:#333}.prod h3{margin:2px 0 8px;font-size:15px}.prod p{margin:4px 0;color:var(--muted);font-size:12px}.actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.actions button{padding:7px 10px;font-size:12px}.danger{color:#ff9aa6;border-color:#733744}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:650px}td,th{padding:12px;border-bottom:1px solid var(--line);text-align:right;font-size:13px}th{color:var(--gold)}.badge{display:inline-block;background:#392b4c;color:#e5c9ff;padding:5px 8px;border-radius:20px;font-size:11px}.upload{border:1px dashed #8a69a8;padding:15px;border-radius:12px;background:#21182b}.preview{width:110px;height:110px;object-fit:cover;border-radius:10px;display:none;margin-top:9px}.notice{padding:12px;border:1px solid #725b2d;background:#2d2415;color:#f4d99d;border-radius:10px;font-size:12px;line-height:1.7;margin:15px 0}.empty{padding:25px;text-align:center;color:var(--muted)}.hidden{display:none!important}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:20px;background:var(--gold);color:#16100a;padding:12px 18px;border-radius:10px;display:none;z-index:10}.toast.show{display:block}@media(max-width:900px){.layout{grid-template-columns:1fr}.side{position:static;display:grid;grid-template-columns:repeat(3,1fr)}.side button{text-align:center}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.products{grid-template-columns:1fr}.form{grid-template-columns:1fr}.form .wide{grid-column:auto}.prod{grid-template-columns:82px 1fr}.prod img{width:82px;height:105px}.side{grid-template-columns:repeat(2,1fr)}.top{align-items:flex-start}.stats{gap:8px}.stat{padding:11px}.stat b{font-size:20px}}
+.btn:focus-visible,.field:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}.prod{transition:border-color .2s,transform .2s}.prod:hover{border-color:#9871c2;transform:translateY(-2px)}.stat{box-shadow:0 8px 24px #0002}.notice{line-height:1.9}.cloud-state{display:inline-flex;align-items:center;gap:6px;margin-inline-start:12px;padding:6px 10px;border:1px solid var(--line);border-radius:30px;color:var(--muted);font-size:11px;font-weight:700}.cloud-state.ok{color:#69c98b;border-color:#39764d}.cloud-state.bad{color:#e28a8a;border-color:#8a4444}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* LUXURY ADMIN REFINEMENT */
+:root{--gold:#d8ad57;--purple:#7650a8;--line:#302b39}
+.btn{transition:transform .2s,border-color .2s,box-shadow .2s}.btn:hover{transform:translateY(-1px);border-color:var(--gold)}.gold{box-shadow:0 8px 24px #d8ad5722}.side button{transition:background .2s,border-color .2s,transform .2s}.side button:hover{transform:translateX(-2px)}
+.stat{background:linear-gradient(145deg,#211c2b,#15131d);box-shadow:0 12px 28px #0003}.stat b{color:#e4bd70}.main{box-shadow:0 18px 55px #0003}.chartbox{margin:18px 0;padding:18px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#1b1723,#111018)}.chartbars{height:150px;display:flex;align-items:flex-end;gap:10px;padding:12px 4px 0;border-bottom:1px solid var(--line)}.chartday{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:7px}.chartday i{display:block;width:min(34px,70%);min-height:3px;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#f0d18b,#9a7133);box-shadow:0 0 16px #d8ad5722}.chartday small{color:var(--muted);font-size:10px}.chartday b{font-size:10px;color:var(--gold)}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* OVEN PREMIUM ADMIN — matched storefront identity */
+:root{
+ --bg:#080808;--panel:#141414;--panel2:#202020;--ink:#f7f7f7;
+ --muted:#b8b8b8;--gold:#c9a34f;--gold2:#f0d58f;--purple:#c9a34f;
+ --line:#353535;--green:#24c85a;--red:#e46c72;
+ --shadow:0 22px 65px #0009;
+}
+html{min-height:100%;scroll-behavior:smooth}
+body{
+ min-height:100vh;
+ background:radial-gradient(ellipse at 50% -18%,#c9a34f18,transparent 43%),var(--bg);
+ color:var(--ink);font-family:Arial,Tahoma,sans-serif;
+ -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+.wrap{width:min(1480px,calc(100% - 48px));margin-inline:auto}
+.top{
+ min-height:82px;padding:16px 0;position:relative;
+ border-bottom:1px solid #ffffff18;
+}
+.brand{font-size:29px;letter-spacing:5px;color:var(--gold2);font-weight:1000}
+.brand small{color:#a99b7b;letter-spacing:3px;font-size:9px;margin-top:4px}
+.login-mark{font-size:40px;letter-spacing:8px;margin-bottom:12px}
+.btn{
+ border:1px solid #ffffff20;background:#1a1a1a;color:var(--ink);
+ border-radius:999px;padding:11px 17px;min-height:42px;
+ transition:transform .2s,border-color .2s,background .2s,box-shadow .2s;
+}
+.btn:hover{transform:translateY(-2px);border-color:var(--gold);background:#242424}
+.btn:active{transform:translateY(0)}
+.gold{
+ background:linear-gradient(120deg,#f0d58f,#c9a34f 62%,#a98032);
+ color:#111;border:1px solid #e8cb84;font-weight:900;
+ box-shadow:0 9px 28px #c9a34f24;
+}
+.gold:hover{background:linear-gradient(120deg,#f7e4b5,#d5b365);color:#080808}
+.login{
+ margin:clamp(42px,9vh,100px) auto;max-width:460px;
+ padding:clamp(22px,4vw,38px);border-radius:24px;
+ background:linear-gradient(145deg,#1b1b1b,#101010);
+ border:1px solid #c9a34f48;box-shadow:var(--shadow);
+}
+.login h1{font-size:clamp(23px,4vw,30px);letter-spacing:-.5px}
+.login .field{margin-top:10px}
+.field{
+ min-height:46px;padding:12px 14px;border-radius:12px;
+ background:#0b0b0b;border:1px solid #ffffff22;color:var(--ink);
+ transition:border-color .2s,box-shadow .2s;
+}
+.field::placeholder{color:#777}
+.field:focus{border-color:var(--gold);box-shadow:0 0 0 3px #c9a34f1c}
+.field option{background:#171717;color:#fff}
+.muted{color:var(--muted)}
+.layout{grid-template-columns:248px minmax(0,1fr);gap:20px;margin:24px auto 42px}
+.side,.main{
+ background:linear-gradient(150deg,#181818,#111);
+ border:1px solid #ffffff18;border-radius:20px;
+ box-shadow:0 14px 42px #0005;
+}
+.side{padding:13px;top:16px}
+.side button{
+ padding:14px 15px;margin:5px 0;border-radius:12px;
+ color:#d7d7d7;text-align:right;min-height:47px;
+}
+.side button.active,.side button:hover{
+ color:#f2d58f;background:linear-gradient(100deg,#c9a34f20,#c9a34f08);
+ border-color:#c9a34f55;
+}
+.side .exit{color:#e58b8b;border-color:transparent}
+.main{padding:clamp(16px,2.5vw,28px);min-width:0;overflow:hidden}
+.sectiontitle{margin-bottom:22px}
+.sectiontitle h2{font-size:clamp(21px,2.5vw,29px);margin:0 0 5px;letter-spacing:-.3px}
+.sectiontitle h3{margin:0}
+.badge{
+ background:#c9a34f18;color:var(--gold2);
+ border:1px solid #c9a34f55;padding:7px 11px;font-weight:800;letter-spacing:1px;
+}
+.stats{grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.stat{
+ background:linear-gradient(145deg,#222,#151515);
+ border:1px solid #ffffff16;border-radius:16px;padding:18px;
+ box-shadow:0 12px 28px #0003;min-width:0;
+}
+.stat b{font-size:clamp(20px,2vw,27px);color:var(--gold2);overflow-wrap:anywhere}
+.chartbox{
+ border:1px solid #ffffff18;border-radius:17px;
+ background:linear-gradient(145deg,#1c1c1c,#111);padding:clamp(14px,2vw,22px);
+}
+.chartbars{border-color:#ffffff20}
+.chartday i{background:linear-gradient(180deg,#f0d58f,#9a7739);box-shadow:0 0 18px #c9a34f24}
+.chartday b,th{color:var(--gold2)}
+.form{gap:13px}
+.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.prod{
+ background:linear-gradient(145deg,#202020,#151515);
+ border:1px solid #ffffff18;border-radius:15px;padding:12px;
+ transition:transform .2s,border-color .2s,box-shadow .2s;
+}
+.prod:hover{border-color:#c9a34f80;transform:translateY(-2px);box-shadow:0 12px 28px #0004}
+.prod img{background:#0a0a0a;border-radius:11px}
+.prod h3{font-size:15px}
+.actions button{border-radius:999px}
+.danger{color:#ffaaaa;border-color:#713e3e}
+.tablewrap{border:1px solid #ffffff18;border-radius:14px;max-width:100%}
+table{min-width:720px}
+td,th{padding:14px 13px}
+tr:hover td{background:#ffffff06}
+.upload{border:1px dashed #c9a34f88;background:#c9a34f0b;border-radius:15px}
+.preview{border:1px solid #c9a34f66}
+.notice{border:1px solid #c9a34f55;background:#c9a34f12;color:#f0dcae;border-radius:13px}
+.empty{border:1px dashed #ffffff20;border-radius:14px}
+.toast{border:1px solid #f0d58f;background:#d6b15e;color:#111;font-weight:800;box-shadow:var(--shadow);border-radius:999px}
+:focus-visible{outline:2px solid var(--gold2)!important;outline-offset:3px}
+@media(max-width:1100px){
+ .layout{grid-template-columns:205px minmax(0,1fr);gap:14px}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:820px){
+ .wrap{width:min(100% - 30px,720px)}
+ .layout{grid-template-columns:minmax(0,1fr);margin-top:16px}
+ .side{
+  position:relative;top:auto;display:flex;gap:7px;overflow-x:auto;
+  padding:9px;scrollbar-width:thin;scroll-snap-type:x proximity;
+ }
+ .side button{flex:0 0 auto;width:auto;white-space:nowrap;text-align:center;margin:0;padding:11px 14px;scroll-snap-align:start}
+ .side .exit{margin:0 0 0 auto}
+ .main{padding:18px}
+}
+@media(max-width:560px){
+ .wrap{width:calc(100% - 22px)}
+ .top{min-height:70px;gap:10px;align-items:center}
+ .brand{font-size:23px;letter-spacing:3px}
+ .brand small{font-size:8px;letter-spacing:2px}
+ .top>.btn{font-size:12px;padding:9px 12px;white-space:nowrap}
+ .login{margin:9vh auto;padding:23px 18px;border-radius:19px}
+ .login-mark{font-size:34px}
+ .side{gap:6px}
+ .side button{font-size:12px;padding:10px 12px;min-height:42px}
+ .side .exit{margin-inline-start:0}
+ .main{padding:14px;border-radius:16px}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .stat{padding:12px;border-radius:13px}
+ .stat small{font-size:11px}
+ .stat b{font-size:19px}
+ .products{grid-template-columns:minmax(0,1fr)}
+ .prod{grid-template-columns:82px minmax(0,1fr);gap:10px;padding:9px}
+ .prod img{width:82px;height:100px}
+ .form{grid-template-columns:minmax(0,1fr)}
+ .form .wide{grid-column:1}
+ .sectiontitle{align-items:flex-start}
+ .sectiontitle h2{font-size:21px}
+ .toolbar{width:100%}
+ .toolbar .btn{flex:1}
+ .tablewrap{margin-inline:-2px}
+ td,th{padding:11px 10px;font-size:12px}
+ .chartbars{gap:5px;height:132px}
+ .chartday small{font-size:9px}
+ .toast{left:10px;right:10px;bottom:12px;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+
+</style></head><body><div class="wrap"><header class="top"><div class="brand">OVEN <small>PREMIUM CONTROL CENTER</small><span id="cloudState" class="cloud-state" role="status">● بانتظار الاتصال</span></div><a class="btn" href="./index.html">↩ العودة للمتجر</a></header>
+<section id="login" class="login"><div class="brand login-mark">OVEN</div><h1>لوحة تحكم OVEN</h1><p class="muted">سجّل الدخول للوصول إلى إدارة المنتجات والطلبات والمخزون وإعدادات المتجر.</p><input class="field" id="email" type="email" placeholder="البريد الإلكتروني" autocomplete="username" ><input class="field" id="password" type="password" placeholder="كلمة المرور" autocomplete="current-password"><button class="btn gold" id="loginBtn" style="width:100%;margin-top:12px">دخول آمن</button><p class="muted" id="loginError"></p></section>
+<div id="app" class="app"><div class="layout"><aside class="side"><button class="active" data-tab="dashboard">▦　نظرة عامة</button><button data-tab="products">◈　المنتجات</button><button data-tab="orders">▤　الطلبات والمبيعات</button><button data-tab="coupons">％　كوبونات الخصم</button><button data-tab="settings">⚙　إعدادات المتجر</button><button class="exit" id="logout">⇥　تسجيل الخروج</button></aside><main class="main" id="content"></main></div></div></div><div class="toast" id="toast"></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script><script>
+(()=>{'use strict';
+const firebaseConfig={apiKey:'AIzaSyDlP0faIGatljtJ0wr9ItZVTlMMqreh8Ak',authDomain:'zodiac-store.firebaseapp.com',projectId:'zodiac-store',storageBucket:'zodiac-store.firebasestorage.app',messagingSenderId:'300144595901',appId:'1:300144595901:web:ac30978b82c4bd53c2b8d4'};
+const fbApp=firebase.apps.length?firebase.app():firebase.initializeApp(firebaseConfig),fbAuth=fbApp.auth(),fbDb=fbApp.firestore();
+const ADMIN_UID='zyOppnZHwpReD3IHnyunUEDl3kv1';let cloudReady=false,cloudBusy=false,cloudUnsubs=[];
+async function cloudWrite(k,v){if(!cloudReady||cloudBusy)return;const col={z_products:'products',z_orders:'orders',z_coupons:'coupons'}[k];try{if(col){const ref=fbDb.collection(col),old=await ref.get(),wanted=new Map((v||[]).map((x,i)=>[String(x.id??x.code??i),x]));let batch=fbDb.batch(),ops=0;old.docs.forEach(d=>{if(!wanted.has(d.id)){batch.delete(d.ref);ops++}});for(const [id,x] of wanted){batch.set(ref.doc(id),x,{merge:false});ops++;if(ops>=450){await batch.commit();batch=fbDb.batch();ops=0}}if(ops)await batch.commit()}else if(k==='z_settings')await fbDb.collection('store').doc('settings').set(v||{})}catch(e){console.error(e);toast('خطأ مزامنة السحابة: '+e.message)}}
+function cloudStatus(message,state=''){const el=$('cloudState');if(el){el.textContent='● '+message;el.classList.remove('ok','bad');if(state)el.classList.add(state)}}
+function startCloud(){if(cloudReady)return;cloudReady=true;cloudStatus('جاري الاتصال بقاعدة بيانات المتجر');const maps={products:'z_products',orders:'z_orders',coupons:'z_coupons'};Object.entries(maps).forEach(([col,key])=>cloudUnsubs.push(fbDb.collection(col).onSnapshot(async snap=>{cloudStatus('متصل — البيانات متزامنة','ok');if(snap.empty){const local=get(key,key==='z_products'?products:key==='z_orders'?orders:coupons);if(Array.isArray(local)&&local.length){await cloudWrite(key,local);return}}const arr=snap.docs.map(d=>({id:d.id,...d.data()}));cloudBusy=true;localStorage.setItem(key,JSON.stringify(arr));cloudBusy=false;if(key==='z_products')products=arr;if(key==='z_orders')orders=arr;if(key==='z_coupons')coupons=arr;if(tab==='dashboard')dashboard();else if(tab==='products'&&key==='z_products')productPage();else if(tab==='orders'&&key==='z_orders')orderPage();else if(tab==='coupons'&&key==='z_coupons')couponPage()},e=>{console.error('OVEN Firestore '+col,e);cloudStatus('خطأ في صلاحيات أو اتصال Firebase','bad');toast('تعذر مزامنة '+col+': '+(e.code||e.message||'خطأ غير معروف'))})));cloudUnsubs.push(fbDb.collection('store').doc('settings').onSnapshot(d=>{cloudStatus('متصل — البيانات متزامنة','ok');if(d.exists){cloudBusy=true;settings=d.data();localStorage.setItem('z_settings',JSON.stringify(settings));cloudBusy=false;if(tab==='settings')settingsPage()}},e=>{console.error('OVEN settings sync',e);cloudStatus('تعذر تحميل إعدادات المتجر','bad');toast('تعذر مزامنة إعدادات المتجر: '+(e.code||e.message||'خطأ غير معروف'))}));}
+
+
+const $=id=>document.getElementById(id);const get=(k,d)=>{try{let x=localStorage.getItem(k);return x===null?d:JSON.parse(x)}catch(e){return d}};const set=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));cloudWrite(k,v);return true}catch(e){alert('مساحة التخزين غير كافية. قلّل حجم الصورة أو استخدم استضافة صور.');return false}};
+const defaultProducts=[
+{id:1,cat:'tee',ar:'تيشيرت أوفرسايز أسود',en:'Black Oversized Tee',price:450,old:0,stock:18,sizes:['S','M','L','XL','XXL'],colors:['أسود','أبيض'],img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85',desc:'تيشيرت قطني بتصميم مريح ولمسة OVEN.'},
+{id:2,cat:'hoodie',ar:'هودي ستار',en:'Star Hoodie',price:850,old:990,stock:12,sizes:['M','L','XL','XXL'],colors:['أسود','أبيض','بيج'],img:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=85',desc:'هودي دافئ بتصميم عصري.'},
+{id:3,cat:'tee',ar:'تيشيرت أبيض كلاسيك',en:'Classic White Tee',price:400,old:0,stock:20,sizes:['S','M','L','XL'],colors:['أبيض','أسود'],img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85',desc:'قطعة أساسية تناسب كل يوم.'},
+{id:4,cat:'jacket',ar:'جاكيت أسود',en:'Black Street Jacket',price:1150,old:1290,stock:7,sizes:['M','L','XL'],colors:['أسود'],img:'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=900&q=85',desc:'جاكيت بطابع streetwear.'},
+{id:5,cat:'tee',ar:'تيشيرت جرافيك',en:'Graphic Tee',price:520,old:0,stock:14,sizes:['S','M','L','XL','XXL'],colors:['أسود','أبيض'],img:'https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=900&q=85',desc:'رسمة مميزة لعشاق التفاصيل.'},
+{id:6,cat:'accessory',ar:'كاب OVEN',en:'OVEN Cap',price:300,old:0,stock:25,sizes:['مقاس موحد'],colors:['أسود'],img:'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=900&q=85',desc:'كاب بإطلالة بسيطة وشعار OVEN.'},
+{id:7,cat:'hoodie',ar:'هودي أسود كلاسيك',en:'Classic Black Hoodie',price:900,old:0,stock:9,sizes:['M','L','XL','XXL'],colors:['أسود'],img:'https://images.unsplash.com/photo-1578681994506-b8f463f6b8d5?auto=format&fit=crop&w=900&q=85',desc:'هودي أسود أساسي بخامة مريحة.'},
+{id:8,cat:'accessory',ar:'شنطة ستريت',en:'Street Bag',price:390,old:0,stock:10,sizes:['مقاس موحد'],colors:['أسود'],img:'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85',desc:'شنطة عملية للإطلالة اليومية.'}
+];
+let products=get('z_products',null),orders=get('z_orders',[]),coupons=get('z_coupons',[{code:'ZODIAC10',type:'percent',value:10,active:true},{code:'WELCOME50',type:'fixed',value:50,active:true}]),settings=get('z_settings',{}),tab='dashboard',editing=null,imageData='';
+if(!Array.isArray(products)||!products.length){products=defaultProducts;try{localStorage.setItem('z_products',JSON.stringify(products))}catch(e){}}
+const money=n=>Number(n||0).toLocaleString('en-US')+' EGP';const toast=t=>{$('toast').textContent=t;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2200)};const persist=()=>{set('z_products',products);set('z_orders',orders);set('z_coupons',coupons);set('z_settings',settings)};
+async function login(){ $('loginError').textContent='جارٍ تسجيل الدخول…';try{const cred=await fbAuth.signInWithEmailAndPassword($('email').value.trim(),$('password').value);if(cred.user.uid!==ADMIN_UID){await fbAuth.signOut();throw new Error('هذا الحساب ليس حساب المدير المصرّح به.')}sessionStorage.setItem('z_admin_session','1');$('login').classList.add('hidden');$('app').style.display='block';startCloud();render();}catch(e){$('loginError').textContent='تعذر الدخول: '+(e.code==='auth/invalid-credential'?'راجع البريد وكلمة المرور.':e.message)}}
+$('loginBtn').onclick=login;$('password').addEventListener('keydown',e=>{if(e.key==='Enter')login()});$('logout').onclick=async()=>{cloudUnsubs.forEach(u=>u());cloudReady=false;await fbAuth.signOut();sessionStorage.removeItem('z_admin_session');$('app').style.display='none';$('login').classList.remove('hidden');$('password').value=''};
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x===b));render()});
+function render(){products=get('z_products',products);orders=get('z_orders',orders);coupons=get('z_coupons',coupons);settings=get('z_settings',settings);if(tab==='dashboard')dashboard();if(tab==='products')productPage();if(tab==='orders')orderPage();if(tab==='coupons')couponPage();if(tab==='settings')settingsPage()}
+function dashboard(){let sales=orders.filter(o=>o.status!=='ملغي').reduce((s,o)=>s+(+o.total||0),0),pending=orders.filter(o=>['جديد','قيد التجهيز'].includes(o.status)).length,stock=products.reduce((s,p)=>s+(+p.stock||0),0),days=Array.from({length:7},(_,i)=>{let d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()-(6-i));let key=d.toDateString(),amount=orders.filter(o=>o.status!=='ملغي'&&new Date(o.date).toDateString()===key).reduce((sum,o)=>sum+(+o.total||0),0);return {label:d.toLocaleDateString('ar-EG',{weekday:'short'}),amount}}),max=Math.max(1,...days.map(x=>x.amount));$('content').innerHTML=`<div class="sectiontitle"><div><h2>نظرة عامة</h2><p class="muted">ملخص سريع لحالة متجر OVEN</p></div><span class="badge">ADMIN</span></div><div class="stats"><div class="stat"><small>عدد المنتجات</small><b>${products.length}</b></div><div class="stat"><small>إجمالي الطلبات</small><b>${orders.length}</b></div><div class="stat"><small>طلبات تحتاج متابعة</small><b>${pending}</b></div><div class="stat"><small>إجمالي المبيعات المسجلة</small><b>${money(sales)}</b></div></div><div class="chartbox"><div class="sectiontitle"><div><h3>المبيعات خلال آخر 7 أيام</h3><p class="muted">حسب تاريخ الطلبات المسجلة — لا تمثل مدفوعات مؤكدة</p></div></div><div class="chartbars">${days.map(d=>`<div class="chartday" title="${money(d.amount)}"><b>${d.amount?Math.round(d.amount):'—'}</b><i style="height:${Math.max(3,d.amount/max*100)}%"></i><small>${d.label}</small></div>`).join('')}</div></div><div class="notice">البيانات المعروضة مأخوذة من سجلات المتجر الحالية. تأكد من تفعيل خدمات Firebase وقواعد الأمان قبل استقبال طلبات حقيقية.</div><h3>آخر الطلبات</h3>${orders.slice(0,5).map(o=>`<p class="muted">#${esc(o.id)} · ${esc(o.name)} · ${money(o.total)} · ${esc(o.status)}</p>`).join('')||'<div class="empty">لا توجد طلبات بعد.</div>'}<h3>ملخص المخزون</h3><p class="muted">إجمالي الوحدات المسجلة: ${stock} — منتجات نفد مخزونها: ${products.filter(p=>+p.stock<=0).length} — منتجات مخزونها منخفض (5 أو أقل): ${products.filter(p=>+p.stock>0&&+p.stock<=5).length}</p><div class="notice"><b>تنبيهات المخزون</b><br>${products.filter(p=>+p.stock<=5).slice(0,8).map(p=>`${esc(p.ar)}: ${+p.stock<=0?'نفد المخزون':'متبقي '+p.stock}`).join(' · ')||'لا توجد تنبيهات مخزون حاليًا.'}</div>`}
+function esc(x){return String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function productPage(){let p=products.find(x=>x.id===editing);$('content').innerHTML=`<div class="sectiontitle"><div><h2>${p?'تعديل منتج':'إدارة المنتجات'}</h2><p class="muted">أضف المنتجات وعدّل الصور والأسعار والمقاسات والألوان والمخزون.</p></div><div class="toolbar"><button class="btn" id="newProduct">＋ منتج جديد</button></div></div><form id="productForm" class="form"><input class="field" name="ar" placeholder="اسم المنتج بالعربي" required value="${esc(p?.ar||'')}"><input class="field" name="en" placeholder="Product name in English" value="${esc(p?.en||'')}" required><input class="field" name="price" type="number" min="0" placeholder="السعر الحالي بالجنيه" value="${p?.price??''}" required><input class="field" name="old" type="number" min="0" placeholder="السعر قبل الخصم (اختياري)" value="${p?.old||''}"><input class="field" name="stock" type="number" min="0" placeholder="الكمية في المخزون" value="${p?.stock??0}" required><select class="field" name="cat"><option value="tee" ${p?.cat==='tee'?'selected':''}>تيشيرتات</option><option value="hoodie" ${p?.cat==='hoodie'?'selected':''}>هوديز</option><option value="jacket" ${p?.cat==='jacket'?'selected':''}>جاكيتات</option><option value="accessory" ${p?.cat==='accessory'?'selected':''}>إكسسوارات</option></select><input class="field" name="sizes" placeholder="المقاسات مفصولة بفاصلة: S,M,L,XL" value="${esc((p?.sizes||['S','M','L','XL','XXL']).join(','))}"><input class="field" name="colors" placeholder="الألوان مفصولة بفاصلة" value="${esc((p?.colors||['أسود','أبيض']).join(','))}"><textarea class="field wide" name="desc" placeholder="وصف المنتج بالعربي">${esc(p?.desc||'')}</textarea><label class="upload wide"><b>صورة المنتج من جهازك</b><p class="muted">اختار صورة عادية من الكمبيوتر أو الموبايل — سيتم ضغطها لتناسب المتجر.</p><input id="imageFile" type="file" accept="image/*"><img id="preview" class="preview" src="${esc(p?.img||'')}" style="${p?.img?'display:block':''}"></label><div class="wide toolbar"><button class="btn gold" type="submit">${p?'حفظ التعديلات':'إضافة المنتج'}</button><button class="btn" type="button" id="cancelEdit">إلغاء</button></div></form><div class="sectiontitle" style="margin-top:30px"><h3>المنتجات الحالية (${products.length})</h3><input class="field" id="adminProductSearch" placeholder="ابحث باسم المنتج أو الفئة..." style="max-width:320px"></div><div class="products">${products.map(x=>`<article class="prod" data-product-search="${esc((x.ar||'')+' '+(x.en||'')+' '+(x.cat||'')).toLowerCase()}"><img src="${esc(x.img||'')}" alt=""><div><h3>${esc(x.ar)}</h3><p>${money(x.price)} · المخزون: ${x.stock}</p><p>${esc(x.cat)}</p><div class="actions"><button class="btn" data-edit="${x.id}">تعديل</button><button class="btn danger" data-delete="${x.id}">حذف</button></div></div></article>`).join('')||'<div class="empty">لا توجد منتجات.</div>'}</div>`;
+$('adminProductSearch').oninput=e=>{let q=e.target.value.trim().toLowerCase();document.querySelectorAll('[data-product-search]').forEach(card=>card.style.display=card.dataset.productSearch.includes(q)?'grid':'none')};$('newProduct').onclick=()=>{editing=null;imageData='';productPage()};$('cancelEdit').onclick=()=>{editing=null;imageData='';productPage()};$('imageFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;if(!file.type.startsWith('image/'))return alert('اختار ملف صورة صالح');try{imageData=await compressImage(file);$('preview').src=imageData;$('preview').style.display='block'}catch(err){alert(err.message||'تعذر قراءة الصورة')}};
+$('productForm').onsubmit=e=>{e.preventDefault();let f=new FormData(e.target),oldProduct=products.find(x=>x.id===editing),img=imageData||oldProduct?.img||products[0]?.img||'';let obj={id:oldProduct?oldProduct.id:Math.max(0,...products.map(x=>+x.id||0))+1,ar:f.get('ar').trim(),en:f.get('en').trim(),price:+f.get('price'),old:+f.get('old')||0,stock:+f.get('stock'),cat:f.get('cat'),sizes:f.get('sizes').split(',').map(x=>x.trim()).filter(Boolean),colors:f.get('colors').split(',').map(x=>x.trim()).filter(Boolean),desc:f.get('desc').trim(),img};if(oldProduct)products=products.map(x=>x.id===oldProduct.id?obj:x);else products.unshift(obj);if(!set('z_products',products))return;editing=null;imageData='';toast('تم حفظ المنتج');productPage()};document.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>{editing=+b.dataset.edit;imageData='';productPage()});document.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>{if(confirm('متأكد من حذف المنتج؟')){products=products.filter(x=>x.id!==+b.dataset.delete);set('z_products',products);productPage();toast('تم حذف المنتج')}})}
+function compressImage(file){return new Promise((resolve,reject)=>{let reader=new FileReader();reader.onerror=reject;reader.onload=()=>{let img=new Image();img.onerror=reject;img.onload=()=>{let max=720,scale=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.round(img.width*scale);c.height=Math.round(img.height*scale);c.getContext('2d').drawImage(img,0,0,c.width,c.height);let data=c.toDataURL('image/jpeg',.56);if(data.length>650000)return reject(new Error('حجم الصورة بعد الضغط ما زال كبيرًا. اختار صورة أصغر.'));resolve(data)};img.src=reader.result};reader.readAsDataURL(file)})}
+function orderPage(){$('content').innerHTML=`<div class="sectiontitle"><div><h2>الطلبات والمبيعات</h2><p class="muted">راجع تفاصيل العملاء وحدّث حالة كل طلب.</p></div><button class="btn" id="export">تصدير CSV</button></div><div class="tablewrap"><table><thead><tr><th>رقم الطلب</th><th>العميل</th><th>الهاتف</th><th>الإجمالي</th><th>التاريخ</th><th>الحالة</th></tr></thead><tbody>${orders.map(o=>`<tr><td>${esc(o.id)}</td><td>${esc(o.name)}<br><small>${esc(o.address)}</small></td><td>${esc(o.phone)}</td><td>${money(o.total)}</td><td>${new Date(o.date).toLocaleString('ar-EG')}</td><td><select class="field" data-status="${esc(o.id)}">${['جديد','قيد التجهيز','تم الشحن','تم التسليم','ملغي'].map(st=>`<option ${o.status===st?'selected':''}>${st}</option>`).join('')}</select></td></tr>`).join('')}</tbody></table></div>${orders.length?'':'<div class="empty">لا توجد طلبات محفوظة حتى الآن.</div>'}`;document.querySelectorAll('[data-status]').forEach(s=>s.onchange=()=>{let o=orders.find(x=>String(x.id)===s.dataset.status);if(o){o.status=s.value;set('z_orders',orders);toast('تم تحديث حالة الطلب')}});$('export').onclick=()=>downloadCSV('oven-orders.csv',[['Order','Date','Name','Phone','Address','Total','Status'],...orders.map(o=>[o.id,o.date,o.name,o.phone,o.address,o.total,o.status])])}
+function couponPage(){$('content').innerHTML=`<div class="sectiontitle"><div><h2>كوبونات الخصم</h2><p class="muted">أنشئ أكواد خصم ثابتة أو نسبة مئوية.</p></div></div><form id="couponForm" class="form"><input class="field" name="code" placeholder="كود الخصم مثل VIP15" required><select class="field" name="type"><option value="percent">نسبة مئوية %</option><option value="fixed">مبلغ ثابت EGP</option></select><input class="field" name="value" type="number" min="1" placeholder="قيمة الخصم" required><button class="btn gold">إضافة الكوبون</button></form><div style="margin-top:20px">${coupons.map((c,i)=>`<div class="prod" style="margin:8px 0;display:flex;align-items:center;justify-content:space-between"><div><b>${esc(c.code)}</b><p>${c.type==='percent'?c.value+'%':money(c.value)} · ${c.active===false?'متوقف':'نشط'}</p></div><div class="actions"><button class="btn" data-togglecoupon="${i}">${c.active===false?'تفعيل':'إيقاف'}</button><button class="btn danger" data-delcoupon="${i}">حذف</button></div></div>`).join('')}</div>`;$('couponForm').onsubmit=e=>{e.preventDefault();let f=new FormData(e.target),code=f.get('code').trim().toUpperCase();if(coupons.some(x=>x.code===code))return alert('هذا الكود موجود بالفعل');coupons.push({code,type:f.get('type'),value:+f.get('value'),active:true});set('z_coupons',coupons);couponPage();toast('تم إنشاء الكوبون')};document.querySelectorAll('[data-togglecoupon]').forEach(b=>b.onclick=()=>{let c=coupons[+b.dataset.togglecoupon];c.active=c.active===false;set('z_coupons',coupons);couponPage()});document.querySelectorAll('[data-delcoupon]').forEach(b=>b.onclick=()=>{coupons.splice(+b.dataset.delcoupon,1);set('z_coupons',coupons);couponPage()})}
+function settingsPage(){$('content').innerHTML=`<div class="sectiontitle"><div><h2>إعدادات المتجر</h2><p class="muted">عدّل بيانات التواصل ومحتوى واجهة المتجر.</p></div></div><form id="settingsForm" class="form"><label class="wide muted">رقم واتساب استقبال الطلبات<input class="field" name="whatsapp" placeholder="201001740923" value="${esc(settings.whatsapp||'201001740923')}"></label><label class="wide muted">عنوان الواجهة بالعربي (HTML مسموح للعناصر البسيطة)<input class="field" name="heroAr" value="${esc(settings.heroAr||'OVEN<span>Wear The Future</span>')}"></label><label class="wide muted">وصف الواجهة بالعربي<textarea class="field" name="taglineAr">${esc(settings.taglineAr||'أكثر من مجرد ملابس.. أسلوب حياة. اكتشف مجموعتنا واختار القطعة اللي تعبّر عن شخصيتك.')}</textarea></label><label class="wide muted">وصف الواجهة بالإنجليزي<textarea class="field" name="taglineEn">${esc(settings.taglineEn||'More than fashion — a way of life. Explore our collection and find the pieces that express your identity.')}</textarea></label><button class="btn gold wide">حفظ إعدادات المتجر</button></form><div class="notice">التغييرات تظهر على واجهة المتجر بعد إعادة تحميلها. بيانات الإعدادات والطلبات والمنتجات مشتركة بين الصفحتين على نفس المتصفح ونفس النطاق.</div>`;$('settingsForm').onsubmit=e=>{e.preventDefault();let f=new FormData(e.target);settings={...settings,whatsapp:String(f.get('whatsapp')).replace(/\D/g,''),heroAr:f.get('heroAr'),taglineAr:f.get('taglineAr'),taglineEn:f.get('taglineEn')};set('z_settings',settings);toast('تم حفظ الإعدادات')}}
+function downloadCSV(name,rows){let csv='\uFEFF'+rows.map(r=>r.map(x=>'"'+String(x??'').replaceAll('"','""')+'"').join(',')).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download=name;a.click();URL.revokeObjectURL(a.href)}
+fbAuth.onAuthStateChanged(user=>{if(user&&user.uid===ADMIN_UID){$('login').classList.add('hidden');$('app').style.display='block';startCloud();render()}else{$('app').style.display='none';$('login').classList.remove('hidden')}});
+})();
+</script></body></html>
