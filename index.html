@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080808"><meta name="color-scheme" content="dark light">
 <meta name="description" content="اكتشف OVEN — ملابس ستريت وير بتصميم مميز. تسوّق التيشيرتات والهوديز والجاكيتات والإكسسوارات مع تجربة شراء سهلة.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OVEN">
+<meta property="og:title" content="OVEN | Wear The Future">
+<meta property="og:description" content="اكتشف مجموعة OVEN من ملابس الستريت وير.">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="robots" content="index,follow"><meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website"><meta property="og:title" content="OVEN | Wear the Future"><meta property="og:description" content="اكتشف مجموعات OVEN واختر القطع التي تعبّر عن أسلوبك.">
 <meta name="twitter:card" content="summary_large_image"><link rel="preconnect" href="https://images.unsplash.com" crossorigin><link rel="preconnect" href="https://www.gstatic.com" crossorigin>
@@ -175,7 +181,7 @@ body>*{position:relative;z-index:1}
 <section id="admin"><div class="sectionhead"><h2 data-ar="إدارة متجر OVEN" data-en="Manage OVEN Store">إدارة متجر OVEN</h2><p>PRIVATE ADMINISTRATION</p></div><div class="panel" style="text-align:center"><p class="hint" data-ar="لوحة تحكم مستقلة لإدارة المنتجات والصور والمخزون والطلبات وكوبونات الخصم وإعدادات المتجر." data-en="A separate dashboard for products, image uploads, stock, orders, coupons and store settings.">لوحة تحكم مستقلة لإدارة المنتجات والصور والمخزون والطلبات وكوبونات الخصم وإعدادات المتجر.</p><a class="btn gold" href="admin.html" data-ar="فتح لوحة التحكم الكاملة ↗" data-en="Open full dashboard ↗">فتح لوحة التحكم الكاملة ↗</a></div></section>
 </main><footer id="footer"><div class="wrap footgrid"><a class="logo" href="#home"><svg viewBox="0 0 100 75"><path d="M8 48 40 9 88 9 55 66 12 66 48 27 78 27" fill="none" stroke="#d6b15e" stroke-width="6"/><path d="M7 58Q50 3 93 25" fill="none" stroke="#c9a34f" stroke-width="2"/></svg><span><strong>OVEN</strong><small>WEAR THE FUTURE</small></span></a><p data-ar="أوفن — ستايلك له مدار خاص." data-en="OVEN — Your style has its own orbit.">أوفن — ستايلك له مدار خاص.</p><p>WhatsApp: 01001740923<br>© OVEN 2026</p></div></footer>
 <div class="modal" id="productModal"><div class="modalbox"><div class="modalhead"><h3 id="modalTitle">Product</h3><button class="close" data-close="productModal">✕</button></div><div id="modalBody"></div></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div><button class="backtop" id="backTop" aria-label="Back to top">↑</button>
-<a class="admin-access-fab" href="./admin.html" aria-label="فتح لوحة إدارة المتجر">ADMIN <span>↗</span></a>
+<a class="admin-access-fab" href="./admin.html" aria-label="فتح لوحة إدارة المتجر" title="لوحة إدارة OVEN">ADMIN <span>↗</span></a>
 <button class="compare-fab" id="compareFab" type="button"><span data-ar="مقارنة المنتجات" data-en="Compare products">مقارنة المنتجات</span> <small id="compareCount">0</small></button>
 <div class="modal" id="compareModal" aria-hidden="true"><div class="modalbox" role="dialog" aria-modal="true" aria-labelledby="compareTitle"><div class="modalhead"><h2 id="compareTitle">مقارنة المنتجات</h2><button class="close" type="button" data-close="compareModal" aria-label="إغلاق">×</button></div><div id="compareContent" class="compare-scroll"></div></div></div>
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script><script>
@@ -199,7 +205,7 @@ const defaultProducts=[
 ];
 const $=id=>document.getElementById(id);const escHTML=v=>String(v??'').replace(/[&<>\"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]));
 const cleanText=(v,max=180)=>String(v??'').replace(/[\u0000-\u001f\u007f]/g,' ').trim().slice(0,max);
-const safeImageUrl=v=>{const value=String(v||'');const fallback='https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80';/* Admin stores compressed JPEG data URLs in Firestore when Firebase Storage is unavailable. Allow only bounded base64 JPEG data URLs; reject arbitrary data URLs. */if(value.startsWith('data:image/jpeg;base64,')&&value.length<=520000&&/^data:image\/jpeg;base64,[A-Za-z0-9+/]+={0,2}$/.test(value))return value;try{const u=new URL(value,location.href);return u.protocol==='https:'?u.href:fallback}catch(_){return fallback}};
+const safeImageUrl=v=>{try{const u=new URL(String(v||''),location.href);return u.protocol==='https:'?u.href:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80'}catch(_){return 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80'}};
 // تخزين آمن: بعض المتصفحات تمنع localStorage عند فتح الملف مباشرة أو في وضع الخصوصية.
 const safeGet=(key,fallback)=>{try{const v=localStorage.getItem(key);return v===null?fallback:JSON.parse(v)}catch(_){return fallback}};
 const safeSet=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value));return true}catch(_){return false}};
